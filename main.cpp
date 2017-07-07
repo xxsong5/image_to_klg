@@ -28,11 +28,6 @@ void convert2klg(const vector<string>& vcolors, const vector<string>& vdepths, s
         cv::Mat color=cv::imread(vcolors[i]);
         cv::Mat depth=cv::imread(vdepths[i],CV_LOAD_IMAGE_UNCHANGED);
 
-        cv::flip(color, color, 0);
-        cv::flip(color, color, 1);
-        cv::flip(depth,depth,0);
-        cv::flip(depth,depth,1);
-
         int64_t t64=(time*1000);
         int32_t coW=color.rows*color.step[0];
         int32_t deW=depth.rows*depth.step[0];
@@ -121,7 +116,7 @@ int main(int argc ,char** argv)
 /////////////////////tum_dataSets load method//////////
     LoadImages(argv[1], vcolor, vdepth,vtime);
 //////////////////////////////////////////////////////
-    if(vcolor.size()<=0)cerr<<"please check you inputs\n";
+    if(vcolor.size()<=0){cerr<<"please check you inputs\n";return 1;}
 
     convert2klg(vcolor, vdepth, argv[2]);
 
