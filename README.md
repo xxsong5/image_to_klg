@@ -11,5 +11,5 @@ cmake ..
 make  
 
 ## how to use for tum rgbd datasets  
-There need two params which is assiostions.txt(in which directroy also include rgb and depth dirs) and savepath  
+There need two params which are assiostions.txt(in which directroy also include rgb and depth dirs) and savepath  
 Example: ./toklg   .../yourTumDataAssociationFile.txt   .../youSaveFile.klg  
