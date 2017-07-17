@@ -12,4 +12,6 @@ make
 
 ## how to use for tum rgbd datasets  
 There need two params which are assiostions.txt(in which directroy also include rgb and depth dirs) and savepath  
-Example: ./toklg   .../yourTumDataAssociationFile.txt   .../youSaveFile.klg  
+Example: ./toklg   .../yourTumDataAssociationFile.txt   .../youSaveFile.klg 
+
+By the way, the tum rgbd datasets can be downloaded at http://vision.in.tum.de/data/datasets/rgbd-dataset
